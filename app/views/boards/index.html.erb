@@ -1,0 +1,12 @@
+<%= render 'shared/header' %>
+<p><%= link_to 'New Board', new_board_path %></p>
+  <% @boards.each do |board| %>
+<div class="card" style=" width: 32rem; height: 36rem;">
+  <%= image_tag((board.image.variant(resize: "300x300") if board.image.attached?),  :class => "card-img-top") %>
+  <div class="card-body">
+    <h5 class="card-title"><%= board.name %></h5>
+    <%= link_to 'Edit', edit_board_path(board), :class => "btn btn-primary" %>
+    <%= link_to 'Show', board_path(board), :class => "btn btn-secondary" %>
+  </div>
+</div>
+<% end %>
