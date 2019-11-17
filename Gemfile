@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'mini_magick'
 
 # Use Bootstrap for SCSS Stylings
-gem 'bootstrap-sass', '~>3.3.7'
+gem 'bootstrap-sass', '~>3.4.1'
 
 
 # Use ActiveStorage variant
