@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails App for outputting fullscreen images/video to raspberry pi for use of electronic menuboards/advertisements.
 
-Things you may want to cover:
+Environment:
+Ubuntu 16.04
+Nginx
+Puma
+PostgreSQL
 
-* Ruby version
+Prequistes:
 
-* System dependencies
+LibreOffice:
+```sudo apt install libreoffice```
 
-* Configuration
+MuPDF:
+```sudo apt-get install mupdf mupdf-tools```
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
