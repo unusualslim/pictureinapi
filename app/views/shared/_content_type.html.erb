@@ -1,0 +1,12 @@
+<% case board.image.content_type
+  when "image/png" %>
+    <%= image_tag((board.image.variant(resize: "300x300") if board.image.attached?),  :class => "card-img-top") %>
+  <% when "image/jpeg" %>
+    <%= image_tag((board.image.variant(resize: "300x300") if board.image.attached?),  :class => "card-img-top") %>
+  <% when "image/gif" %>
+    <%= image_tag((board.image.variant(resize: "300x300") if board.image.attached?),  :class => "card-img-top") %>
+  <% when "video/mp4" %>
+    <%= video_tag(url_for(board.image), class:"card-img-top") %>
+  <% else %>
+    <%= link_to 'Back', boards_path %>
+<% end %>

@@ -6,12 +6,16 @@ ruby '2.4.2'
 gem 'rails', '~> 5.2.3'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
-gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'friendly_id', '~> 5.2.4'
 gem 'devise'
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
+gem 'sprockets-rails', '>=2.1.4'
+gem 'activestorage-validator'
+
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
@@ -24,10 +28,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Mini Magick to resize images
 gem 'mini_magick'
-
-# Use Bootstrap for SCSS Stylings
-gem 'bootstrap-sass', '~>3.3.7'
-
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

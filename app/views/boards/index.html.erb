@@ -2,11 +2,39 @@
 <p><%= link_to 'New Board', new_board_path %></p>
   <% @boards.each do |board| %>
 <div class="card" style=" width: 32rem; height: 36rem;">
-  <%= image_tag((board.image.variant(resize: "300x300") if board.image.attached?),  :class => "card-img-top") %>
+<% case board.image.content_type
+  when "image/png" %>
+    <%= image_tag((board.image.variant(resize: "300x300") if board.image.attached?),  :class => "card-img-top") %>
+  <% when "image/jpeg" %>
+    <%= image_tag((board.image.variant(resize: "300x300") if board.image.attached?),  :class => "card-img-top") %>
+  <% when "image/gif" %>
+    <%= image_tag((board.image.variant(resize: "300x300") if board.image.attached?),  :class => "card-img-top") %>
+  <% when "video/mp4" %>
+    <%= video_tag((url_for(board.image) if board.image.attached?), class:"card-img-top") %>
+  <% when "application/pdf" %>
+    <%= image_tag((board.image.blob.preview(resize: "300X300") if board.image.blob.previewable?), :class => "card-img-top") %>
+  <% when "application/msword" %>
+    <%= image_tag((board.image.blob.preview(resize: "300X300") if board.image.blob.previewable?), :class => "card-img-top") %>
+  <% when "application/vnd.openxmlformats-officedocument.wordprocessingml.document" %>
+    <%= image_tag((board.image.blob.preview(resize: "300X300") if board.image.blob.previewable?), :class => "card-img-top") %>
+  <% when "application/vnd.ms-excel" %>
+    <%= image_tag((board.image.blob.preview(resize: "300X300") if board.image.blob.previewable?), :class => "card-img-top") %>
+  <% when "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" %>
+    <%= image_tag((board.image.blob.preview(resize: "300X300") if board.image.blob.previewable?), :class => "card-img-top") %>
+  <% when "application/vnd.ms-powerpoint" %>
+    <%= image_tag((board.image.blob.preview(resize: "300X300") if board.image.blob.previewable?), :class => "card-img-top") %>
+  <% when "application/application/vnd.openxmlformats-officedocument.presentationml.presentation" %>
+    <%= image_tag((board.image.blob.preview(resize: "300X300") if board.image.blob.previewable?), :class => "card-img-top") %>
+  <% else %>
+    <%= link_to 'Back', boards_path %>
+<% end %>
+
+
   <div class="card-body">
     <h5 class="card-title"><%= board.name %></h5>
     <%= link_to 'Edit', edit_board_path(board), :class => "btn btn-primary" %>
     <%= link_to 'Show', board_path(board), :class => "btn btn-secondary" %>
+    <%= link_to 'Download', rails_blob_path(board.image, disposition: "attachment") %>
   </div>
 </div>
 <% end %>
