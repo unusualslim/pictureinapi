@@ -7,6 +7,8 @@ set :puma_threads,	[4,16]
 set :pum_workers, 	0
 set :rbenv_ruby, 	'2.5.2'
 
+set :linked_files, %w{config/master.key}
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 

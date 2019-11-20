@@ -86,4 +86,4 @@ production:
   <<: *default
   database: menuboard_production
   username: deploy
-  password: <%= ENV['MENUBOARD_DATABASE_PASSWORD'] %>
+  password: testing123
