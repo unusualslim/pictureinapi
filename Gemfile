@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '>= 2.1.0'
 gem 'sprockets-rails', '>=2.1.4'
 gem 'activestorage-validator'
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
