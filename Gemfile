@@ -16,6 +16,7 @@ gem 'sassc-rails', '>= 2.1.0'
 gem 'sprockets-rails', '>=2.1.4'
 gem 'activestorage-validator'
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+gem 'poppler', '~> 3.0', '>= 3.0.7'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
