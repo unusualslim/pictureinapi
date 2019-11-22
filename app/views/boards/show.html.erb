@@ -8,7 +8,7 @@
   <% when "video/mp4" %>
     <%= video_tag(url_for(@board.image),controls: false, autoplay: true, muted: true, loop: true, class:"vid-fluid")  %>
   <% when "application/pdf" %>
-    <%= image_tag @board.image.blob.preview(resize: @board.resolution), :class => "img-fluid" %>
+    <%= image_tag @board.image.blob.preview(resize: "1920x1080"), :class => "img-fluid" %>
   <% when "application/msword" %>
     <%= image_tag @board.image.blob.preview(resize: @board.resolution), :class => "img-fluid" %>
   <% when "application/vnd.openxmlformats-officedocument.wordprocessingml.document" %>
