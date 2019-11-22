@@ -2,7 +2,7 @@ class BoardsController < ApplicationController
   before_action :authenticate_user!, :except => [ :show]
 
   def index 
-    @boards = Board.all
+    @boards = Board.where(user_id: current_user.id)
   end
 
   def show
@@ -39,6 +39,6 @@ class BoardsController < ApplicationController
 
   private
     def board_params
-      params.require(:board).permit(:name, :image)
+      params.require(:board).permit(:name, :image, :resolution, :user_id)
     end
   end

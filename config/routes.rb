@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
   get 'pages/index'
   devise_for :users
-  get 'vboards/index'
+ 
   root :to => "pages#index"
-  get 'board/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :boards
-  resources :vboards
+  resources :boards, except: :show
+    
+  get 'users/:user_id/boards/:id', to: 'boards#show'
+  
+#  resources :users do
+#    resources :boards, only: :show
+#  end
 
 end

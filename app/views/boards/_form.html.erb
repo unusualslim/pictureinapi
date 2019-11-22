@@ -20,7 +20,17 @@
   <p>
     <%= form.label :image %>
     <%= form.file_field :image %>
+    .jpg .gif .png .mp4 .doc .docx .ppt .pptx .xls .xlsx .pdf
   </p>
+  <p>
+    <%= form.label :resolution %>
+    <%= form.text_field :resolution %>
+    Ex: 1920x1080
+  </p>
+  <p>
+    <%= form.hidden_field :user_id, value: current_user.id %>
+  </p>
+
   <p>
     <%= form.submit %>
   </p>
