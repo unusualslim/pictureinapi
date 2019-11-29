@@ -35,7 +35,7 @@
     <%= link_to 'Edit', edit_board_path(board), :class => "btn btn-secondary" %>
     <%= link_to 'Download', rails_blob_path(board.image, disposition: "attachment") %><br />
       <code style='white-space: now width: auto;'>
-        <br /><%= "https://pictureinapi.com/boards/#{board.slug}" %>
+        <br /><%= "http://pictureinapi.com/users/#{current_user.id}/boards/#{board.slug}" %>
       </code>
   </div>
 </div>
