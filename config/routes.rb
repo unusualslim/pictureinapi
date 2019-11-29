@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :boards #, except: :show
     
-#  get 'users/:user_id/boards/:id', to: 'boards#show'
+  get 'users/:user_id/boards/:id', to: 'boards#show'
   
 #  resources :users do
 #    resources :boards, only: :show
