@@ -1,14 +1,31 @@
 <%= render 'shared/header' %>
-  <div class="container">
-    <p>Install unclutter to hide the mouse</p>
-    <code contenteditable spellcheck="false">
-     sudo apt-get install unclutter
-    </code>
-    <p>Install xdotools to autorefresh chromium</p>
-    <code contenteditable spellcheck="false">
-     sudo apt-get install xdotools
-    </code>
-    <p>Test block</p>
-    <pre class="code-pre command"><code langs=""><ul class="prefixed"><li class="line" prefix="$">sudo apt-get update
-</li></ul></code></pre>
-  </div>
+<div class="container-fluid">
+<p>Display your ads, menus, and pictures anywhere with a Raspberry Pi</p>
+
+<h2>Raspberry Pi Setup</h2>
+<ol>
+  <li>Install Raspbian Full</li>
+  <li>Connect to wifi</li>
+  <li>Turn Off Bluetooth</li>
+  <li>Update</li>
+  <li>Enable SSH
+    Start > Preferences > RaspberryPi Configuration
+  Interfaces Tab> Enable SSH</li>
+  <li>Get the ip address of the raspeberry pi
+Open Terminal
+  <pre><code>ifconfig</code></pre>
+Write down IP Address</li>
+  <li>Connect to Pi
+    <pre><code>ssh pi@192.168.168.###</code></pre></li>
+  <li>Once connected, configure install dependencies
+    <pre><code>mkdir -p .config/lxsession/LXDE-pi
+sudo apt-get install unclutter xdotool
+sudo apt-get update</code></pre></li>
+  <li>Configure Chromium to autofresh every 10 minutes<pre><code>printf "#!/bin/bash\nwhile true;\ndo\nsleep 600  #refresh time in seconds\nexport XAUTHORITY=/home/pi/.Xauthority; export DISPLAY=:0; xdotool key "Shift+F5"\ndone" > ~/autorefesh-chromium.sh</code></pre>
+    <pre><code>sudo chmod 755 ~/autorefresh-chromium.sh</code></pre></li>
+  <li>Make Pi boot into Chromium Kiosk mode and hide the mouse<pre><code>printf "## Place this file here: /home/pi/.config/lxsession/LXDE-pi/autostart\n\n@lxpanel --profile LXDE-pi\n@pcmanfm --desktop --profile LXDE-pi\n@xscreensaver -no-splash\npoint-rpi\n\n# This section used for WaitWhile Chromium\n@xset s off\n@xset -dpms\n@xset s noblank\n@unclutter -idle 0\n@chromium-browser --kiosk --incognito https://pictureinapi.com\n@/home/pi/autorefresh-chromium.sh\n" > .config/lxsession/LXDE-pi/autostart</code></pre></li>
+  <li>Make sure Pi uses the full screen <pre><code>sudo nano /boot/config.txt</code></pre>
+    <p>uncomment "disable_overscan"</p></li>
+  <li>Reboot the Pi to test configuration:<pre><code>sudo shutdown -r now</code></pre></li>
+</ol>
+</div>
