@@ -1,0 +1,6 @@
+<%= link_to 'Edit', edit_article_path(@article.id) %>
+<%= link_to 'Destroy', article_path(@article.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<h2><%= @article.title %></h2>
+<br>
+<%= @article.body.html_safe %>
