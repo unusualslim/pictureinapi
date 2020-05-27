@@ -7,6 +7,7 @@ class BoardsController < ApplicationController
 
   def show
     @board = Board.friendly.find(params[:id])
+    expires_in 24.hours, :public => true
   end
 
   def new
