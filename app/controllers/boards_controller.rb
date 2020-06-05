@@ -7,7 +7,8 @@ class BoardsController < ApplicationController
 
   def show
     @board = Board.friendly.find(params[:id])
-    expires_in 24.hours, :public => true
+    expires_in 24.hours
+    fresh_when(:etag => @board, :last_modified => @board.created_at.utc)
   end
 
   def new

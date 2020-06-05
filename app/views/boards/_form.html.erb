@@ -19,7 +19,7 @@
   </p>
   <p>
     <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, value: form.object.image.signed_id if @board.image.attached? %>
     .jpg .gif .png .mp4 .doc .docx .ppt .pptx .xls .xlsx .pdf
   </p>
   <p>
