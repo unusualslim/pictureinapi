@@ -2,7 +2,7 @@ class BoardsController < ApplicationController
   before_action :authenticate_user!, :except => [ :show]
 
   def index 
-    @boards = Board.where(user_id: current_user.id)
+    @boards = Board.where(user_id: current_user.id).order(:name)
   end
 
   def show
