@@ -17,6 +17,9 @@ gem 'sprockets-rails', '>=2.1.4'
 gem 'activestorage-validator'
 gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem 'poppler', '~> 3.0', '>= 3.0.7'
+# Added these because bundler told me to.
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
+gem 'webdrivers', '~> 5.0', require: false
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
