@@ -2,7 +2,7 @@
 
 set :application,	'Picture_in_a_Pi'
 set :repo_url,		'https://github.com/unusualslim/pictureinapi'
-#set :user,		'dev'
+set :user,		'deploy'
 set :puma_threads,	[4,16]
 set :puma_workers, 	0
 set :rbenv_ruby, 	'2.6.5'
