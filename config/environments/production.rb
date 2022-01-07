@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.hosts << "pictureinapi.com"
+  config.hosts << "www.pictureinapi.com"
+  config.hosts << "138.197.110.108" 
   # Code is not reloaded between requests.
   config.cache_classes = true
 
