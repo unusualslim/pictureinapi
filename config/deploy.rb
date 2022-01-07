@@ -6,7 +6,7 @@ set :user,		'deploy'
 set :puma_threads,	[4,16]
 set :puma_workers, 	0
 set :rbenv_ruby, 	'2.6.5'
-
+set :rbenv_custom_path, "/home/dev/.rbenv"
 set :linked_files, %w{config/master.key}
 
 # Default branch is :master
