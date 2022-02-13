@@ -15,11 +15,14 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sassc-rails', '~> 2.1.2'
 gem 'sprockets-rails', '~> 3.4.2'
 gem 'activestorage-validator', '~> 0.2.0'
-gem 'aws-sdk', '~> 3.1.0'
+#gem 'aws-sdk', '~> 3.1.0'
+gem 'aws-sdk-s3', '~> 1.112'
 gem 'poppler', '~> 3.5.1'
 # Added these because bundler told me to.
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 gem 'webdrivers', '~> 5.0', require: false
+gem 'gobject-introspection', '~> 3.4', '>= 3.4.3'
+
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5.2.1'
