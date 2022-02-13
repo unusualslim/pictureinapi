@@ -13,9 +13,10 @@ amazon:
    secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
    region: nyc3
    bucket: pictureinapi
-   endpoint: 'https://nyc3.digitaloceanspaces.com'
+   endpoint: "https://nyc3.digitaloceanspaces.com"
    upload:
-    cache_control: 'max-age=86400, private'
+    cache_control: "max-age=86400, private"
+
 # Remember not to checkin your GCS keyfile to a repository
 # google:
 #   service: GCS
