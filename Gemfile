@@ -5,7 +5,7 @@ ruby '2.6.5'
 
 gem 'rails', '~> 6.1.4'
 gem 'pg', '~> 1.2.3'
-gem 'puma', '~> 5.5.2'
+gem 'puma', '~> 5.6.2'
 gem 'uglifier', '~> 4.2.0'
 gem 'coffee-rails', '~> 5.0.0'
 gem 'jquery-rails', '~> 4.4.0'
