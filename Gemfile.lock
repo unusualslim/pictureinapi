@@ -341,7 +341,7 @@ DEPENDENCIES
   mimemagic!
   mini_magick (~> 4.11.0)
   pg (~> 1.2.3)
-  poppler (~> 3.5.1)
+  poppler (~> 3.5, >= 3.5.1)
   puma (~> 5.5.2)
   rails (~> 6.1.4)
   sassc-rails (~> 2.1.2)
