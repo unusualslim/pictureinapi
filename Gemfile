@@ -23,7 +23,7 @@ gem 'aws-sdk-s3', '~> 1.112'
 #gem 'cairo-gobject', '~> 3.5', '>= 3.5.1'
 #gem 'glib2', '~> 3.5', '>= 3.5.1'
 #gem 'gtk3', '~> 3.0', '>= 3.0.8'
-gem 'poppler', '~> 3.5.1'
+#gem 'poppler', '~> 3.5.1'
 
 
 # Added these because bundler told me to.
