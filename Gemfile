@@ -17,6 +17,12 @@ gem 'sprockets-rails', '~> 3.4.2'
 gem 'activestorage-validator', '~> 0.2.0'
 #gem 'aws-sdk', '~> 3.1.0'
 gem 'aws-sdk-s3', '~> 1.112'
+#Using FFMEG to preview videos
+gem 'streamio-ffmpeg', '~> 3.0', '>= 3.0.2'
+
+#Using MUPDF instead of Poppler due to Heroku issues
+#gem 'mupdf'
+
 #Using Poppler for PDFs and dependencies
 #gem 'gobject-introspection', '~> 3.4', '>= 3.4.3'
 #gem 'cairo', '~> 1.17', '>= 1.17.5'
