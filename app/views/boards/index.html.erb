@@ -6,11 +6,11 @@
   when /image*/ %>
     <%= image_tag((board.image.variant(resize: "300x300") if board.image.attached?),  :class => "card-img-top") %>
   <% when /video*/ %>
-    <% if board.image %>
+    <% if board.image.previewable? %>
       <%= video_tag((url_for(board.image) if board.image.attached?), class:"card-img-top") %>
     <% end %>
   <% when /application*/ %>
-    <% if board.image %>
+    <% if board.image.previewable? %>
       <%= image_tag((board.image.blob.preview(resize: "300X300") if board.image.blob.previewable?), :class => "card-img-top") %>
     <% end %>
   <% else %>
