@@ -18,11 +18,11 @@ gem 'activestorage-validator', '~> 0.2.0'
 #gem 'aws-sdk', '~> 3.1.0'
 gem 'aws-sdk-s3', '~> 1.112'
 #Using Poppler for PDFs and dependencies
-gem 'gobject-introspection', '~> 3.4', '>= 3.4.3'
-gem 'cairo', '~> 1.17', '>= 1.17.5'
-gem 'cairo-gobject', '~> 3.5', '>= 3.5.1'
-gem 'glib2', '~> 3.5', '>= 3.5.1'
-gem 'gtk3', '~> 3.0', '>= 3.0.8'
+#gem 'gobject-introspection', '~> 3.4', '>= 3.4.3'
+#gem 'cairo', '~> 1.17', '>= 1.17.5'
+#gem 'cairo-gobject', '~> 3.5', '>= 3.5.1'
+#gem 'glib2', '~> 3.5', '>= 3.5.1'
+#gem 'gtk3', '~> 3.0', '>= 3.0.8'
 gem 'poppler', '~> 3.5.1'
 
 
