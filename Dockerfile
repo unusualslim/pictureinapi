@@ -11,6 +11,10 @@ RUN apt-get install -y apt-utils
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y --no-install-recommends nodejs
 RUN apt-get install -y yarn
+#ActiveStorage Previewers Dependencies
+RUN apt-get install -y poppler-utils
+RUN apt-get install -y libreoffice
+RUN apt-get install -y ffmpeg
 # Create directory docker-rails
 RUN mkdir /docker-rails
 ENV RAILS_ENV="production"

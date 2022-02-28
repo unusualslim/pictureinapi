@@ -50,6 +50,7 @@ gem 'jbuilder', '~> 2.11.5'
 # Use Mini Magick to resize images
 gem 'mini_magick', '~> 4.11.0'
 gem 'image_processing', '~> 1.2'
+gem 'rmagick', '~> 4.2', '>= 4.2.4'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
