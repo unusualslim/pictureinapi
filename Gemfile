@@ -9,6 +9,7 @@ gem 'puma', '~> 5.6.2'
 gem 'uglifier', '~> 4.2.0'
 gem 'coffee-rails', '~> 5.0.0'
 gem 'jquery-rails', '~> 4.4.0'
+gem 'nokogiri', '~> 1.13', '>= 1.13.3'
 gem 'friendly_id', '~> 5.4.2'
 gem 'devise', '~> 4.8.1'
 gem 'bootstrap-sass', '~> 3.4.1'
@@ -17,13 +18,19 @@ gem 'sprockets-rails', '~> 3.4.2'
 gem 'activestorage-validator', '~> 0.2.0'
 #gem 'aws-sdk', '~> 3.1.0'
 gem 'aws-sdk-s3', '~> 1.112'
+#Using FFMEG to preview videos
+gem 'streamio-ffmpeg', '~> 3.0', '>= 3.0.2'
+
+#Using MUPDF instead of Poppler due to Heroku issues
+#gem 'mupdf'
+
 #Using Poppler for PDFs and dependencies
 #gem 'gobject-introspection', '~> 3.4', '>= 3.4.3'
 #gem 'cairo', '~> 1.17', '>= 1.17.5'
 #gem 'cairo-gobject', '~> 3.5', '>= 3.5.1'
 #gem 'glib2', '~> 3.5', '>= 3.5.1'
 #gem 'gtk3', '~> 3.0', '>= 3.0.8'
-gem 'poppler', '~> 3.5.1'
+#gem 'poppler', '~> 3.5.1'
 
 
 # Added these because bundler told me to.
@@ -42,7 +49,7 @@ gem 'jbuilder', '~> 2.11.5'
 
 # Use Mini Magick to resize images
 gem 'mini_magick', '~> 4.11.0'
-gem 'image_processing', '~> 1.12.1'
+gem 'image_processing', '~> 1.2'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
