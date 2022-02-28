@@ -4,14 +4,14 @@
 <div style="display: none;"><%= board.image.content_type %></div>
 <% case board.image.content_type
   when /image*/ %>
-    <%= image_tag((board.image.variant(resize: "300x300") if board.image.attached?),  :class => "card-img-top") %>
+    <%= image_tag((board.image.representation(resize_to_limit: [300, 300]) if board.image.representable?),  :class => "card-img-top") %>
   <% when /video*/ %>
-    <% if board.image.previewable? %>
-      <%= video_tag((url_for(board.image) if board.image.attached?), class:"card-img-top") %>
+    <% if board.image.representable? %>
+      <%= video_tag(url_for(board.image), class:"card-img-top") %>
     <% end %>
   <% when /application*/ %>
-    <% if board.image.previewable? %>
-      <%= image_tag((board.image.blob.preview(resize: "300X300") if board.image.blob.previewable?), :class => "card-img-top") %>
+    <% if board.image.representable? %>
+      <%= image_tag(board.image.blob.representation(resize_to_limit:[300, 300]), :class => "card-img-top") %>
     <% end %>
   <% else %>
     <%= board.image.content_type %>
