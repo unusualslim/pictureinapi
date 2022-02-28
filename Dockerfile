@@ -24,6 +24,8 @@ WORKDIR /docker-rails
 COPY Gemfile /docker-rails/Gemfile
 COPY Gemfile.lock /docker-rails/Gemfile.lock
 # Install dependencies
+ENV BUNDLER_VERSION=2.3.8
+RUN gem install bundler:2.3.8
 RUN bundle install
 COPY . /docker-rails
 EXPOSE 3000 3035
