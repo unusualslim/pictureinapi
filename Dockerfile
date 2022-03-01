@@ -15,6 +15,7 @@ RUN apt-get install -y yarn
 RUN apt-get install -y poppler-utils
 RUN apt-get install -y libreoffice
 RUN apt-get install -y ffmpeg
+RUN apt-get install -y imagemagick
 # Create directory docker-rails
 RUN mkdir /docker-rails
 ENV RAILS_ENV="production"

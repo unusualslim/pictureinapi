@@ -30,7 +30,7 @@ gem 'turbolinks', '~> 5.2.1'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Mini Magick to resize images
-gem 'mini_magick', '~> 4.11.0'
+#gem 'mini_magick', '~> 4.11.0'
 
 #gem 'image_processing', '~> 1.2'
 #gem 'rmagick', '~> 4.2', '>= 4.2.4'
