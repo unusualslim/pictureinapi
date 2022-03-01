@@ -21,12 +21,22 @@
 
   <div class="card-body">
     <h2 class="card-title" style="overflow:auto; white-space:nowrap;"><%= board.name %></h2>
-    <%# link_to 'Full Screen', "http://pictureinapi.com/users/#{current_user.id}/boards/#{board.slug}", :class => "btn btn-primary btn-sm" %>
-    <%= link_to 'Full Screen', board_path(board), :class => "btn btn-primary btn-sm" %>
+    <%= link_to 'Full Screen', "http://#{ENV['HOSTNAME']}/users/#{current_user.id}/boards/#{board.slug}", :class => "btn btn-primary btn-sm" %>
+    <%# link_to 'Full Screen', board_path(board), :class => "btn btn-primary btn-sm" %>
     <%= link_to 'Edit', edit_board_path(board), :class => "btn btn-secondary btn-sm" %>
     <%= link_to 'Download', rails_blob_path(board.image, disposition: "attachment"), :class => "btn btn-secondary btn-sm" %>
     <%= link_to 'X', board_path(board), method: :delete, data: {confirm: 'Are you sure?'}, :class => "btn btn-danger btn-sm" %><br><br>
-    <pre class="code" style="overflow: auto; width: auto;"><%= "http://pictureinapi.com/users/#{current_user.id}/boards/#{board.slug}" %></pre>
+    <pre class="code" id="code" style="overflow: auto; width: auto;"><%= "http://#{ENV['HOSTNAME']}/users/#{current_user.id}/boards/#{board.slug}" %></pre>
+    <button onclick="copyToClipboard('#code')">Copy</button>
   </div>
 </div>
 <% end %>
+<script>
+function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+}
+</script>
