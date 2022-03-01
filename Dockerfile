@@ -6,11 +6,16 @@ RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources
 RUN apt-get update && apt-get install -qq -y build-essential libpq-dev ca-certificates curl libssl-dev postgresql-client openssh-server --fix-missing --no-install-recommends
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install -y nodejs
+#RUN apt-get install -y nodejs
 RUN apt-get install -y apt-utils
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y --no-install-recommends nodejs
 RUN apt-get install -y yarn
+#ActiveStorage Previewers Dependencies
+RUN apt-get install -y poppler-utils
+RUN apt-get install -y libreoffice
+RUN apt-get install -y ffmpeg
+RUN apt-get install -y imagemagick
 # Create directory docker-rails
 RUN mkdir /docker-rails
 ENV RAILS_ENV="production"
@@ -20,6 +25,9 @@ WORKDIR /docker-rails
 COPY Gemfile /docker-rails/Gemfile
 COPY Gemfile.lock /docker-rails/Gemfile.lock
 # Install dependencies
+ENV BUNDLER_VERSION=2.3.8
+RUN gem install bundler:2.3.8
+RUN bundle update --bundler
 RUN bundle install
 COPY . /docker-rails
 EXPOSE 3000 3035
