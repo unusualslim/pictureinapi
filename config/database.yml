@@ -23,11 +23,12 @@ default: &default
   host: <%= ENV['POSTGRESQL_HOST'] %>
   username: <%= ENV['POSTGRESQL_USERNAME'] %>
   password: <%= ENV['POSTGRESQL_PASSWORD'] %>
-  port: 25060
+#  port: 25060
 
 development:
   <<: *default
   database: menuboard_development
+  host: localhost
   username: pguser
   password: testing123
   # The specified database role being used to connect to postgres.
