@@ -19,14 +19,15 @@ gem 'activestorage-validator', '~> 0.2.0'
 gem 'aws-sdk-s3', '~> 1.112'
 
 # Added these because bundler told me to.
-gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
-gem 'webdrivers', '~> 5.0', require: false
-
+#gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
+#gem 'webdrivers', '~> 5.0', require: false
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5.2.1'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.11.5'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -34,6 +35,7 @@ gem 'jbuilder', '~> 2.11.5'
 
 # Use Mini Magick to resize images
 gem 'mini_magick', '~> 4.11.0'
+
 #gem 'image_processing', '~> 1.2'
 #gem 'rmagick', '~> 4.2', '>= 4.2.4'
 
@@ -53,11 +55,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring', '~> 2.1.1'
   gem 'spring-watcher-listen', '~> 2.0.1'
-  gem 'capistrano', '~> 3.16.0'
-  gem 'capistrano-rbenv', '~> 2.2.0'
-  gem 'capistrano-rails', '~> 1.6.1'
-  gem 'capistrano-bundler', '~> 2.0.1'
-  gem 'capistrano3-puma', '~> 5.2.0'
+#  gem 'capistrano', '~> 3.16.0'
+#  gem 'capistrano-rbenv', '~> 2.2.0'
+#  gem 'capistrano-rails', '~> 1.6.1'
+#  gem 'capistrano-bundler', '~> 2.0.1'
+#  gem 'capistrano3-puma', '~> 5.2.0'
 end
 
 group :test do
