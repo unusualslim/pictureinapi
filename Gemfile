@@ -19,7 +19,7 @@ gem 'activestorage-validator', '~> 0.2.0'
 gem 'aws-sdk-s3', '~> 1.112'
 
 #Need to process image variants
-gem 'image_processing', '~> 1.12', '>= 1.12.1'
+gem 'image_processing', '~> 1.12'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5.2.1'
