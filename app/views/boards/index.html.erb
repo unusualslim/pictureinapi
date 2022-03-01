@@ -1,5 +1,7 @@
 <%= render 'shared/header' %>
+<p><input id="gfg" type="text" placeholder="Search here"></p>
 <% @boards.each do |board| %>
+<div id="geeks"> 
 <div class="card" style=" width: 32rem; height:44rem;">
 <div style="display: none;"><%= board.image.content_type %></div>
 <% case board.image.content_type
@@ -30,6 +32,7 @@
     <button onclick="copyToClipboard('#code')">Copy</button>
   </div>
 </div>
+</div>
 <% end %>
 <script>
 function copyToClipboard(element) {
@@ -40,3 +43,14 @@ function copyToClipboard(element) {
     $temp.remove();
 }
 </script>
+<script> 
+            $(document).ready(function() { 
+                $("#gfg").on("keyup", function() { 
+                    var value = $(this).val().toLowerCase(); 
+                    $("#geeks .card").filter(function() { 
+                        $(this).toggle($(this).text() 
+                        .toLowerCase().indexOf(value) > -1) 
+                    }); 
+                }); 
+            }); 
+</script> 
