@@ -18,15 +18,11 @@ gem 'sprockets-rails', '~> 3.4.2'
 gem 'activestorage-validator', '~> 0.2.0'
 gem 'aws-sdk-s3', '~> 1.112'
 
-# Added these because bundler told me to.
-#gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
-#gem 'webdrivers', '~> 5.0', require: false
-
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5.2.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.11.5'
+#gem 'jbuilder', '~> 2.11.5'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -55,6 +51,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring', '~> 2.1.1'
   gem 'spring-watcher-listen', '~> 2.0.1'
+  gem 'derailed_benchmarks'
 #  gem 'capistrano', '~> 3.16.0'
 #  gem 'capistrano-rbenv', '~> 2.2.0'
 #  gem 'capistrano-rails', '~> 1.6.1'
@@ -71,4 +68,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+#gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
